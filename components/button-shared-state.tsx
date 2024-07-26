@@ -2,12 +2,14 @@
 "use client";
 import { useState } from "react";
 
-interface ButtonProps {
+interface ButtonSharedStateProps {
     count: number;
     onClick: () => void;
 }
 
-export default function Button({ count, onClick }: ButtonProps) {
+export const ButtonSharedState = ({
+    count, onClick,
+}: ButtonSharedStateProps) => {
     return (
         <button
             onClick={onClick}
